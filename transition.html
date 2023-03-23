@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+        .myclass {
+            background-color: rgb(100, 100, 0);
+            opacity: 0.1;
+        }
+
+        body {
+            background-image: url('images/archery.png');
+
+        }
+
+        img {
+            width: 500px;
+            opacity: 1;
+        }
+
+        img:hover {
+            border-radius: 50%;
+            transition: 5s;
+            opacity: 0.2;
+
+        }
+
+        .text {
+            width: 500px;
+            opacity: 0.5;
+        }
+
+        .text:focus {
+            height: 50px;
+            transition: 5s;
+            opacity: 1;
+
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" class="text" />
+    <img src="images/car.png" />
+    <h1 class="myclass">Hello</h1>
+</body>
+
+</html>
