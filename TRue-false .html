@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table
+        {
+width: 100%;
+background-color: cornflowerblue;
+height:650px ; 
+        }
+        .greenbg
+        {
+width:100% ;
+height:100px ;
+font-size:25px ;
+background-color:green ;
+        }
+        .redbg
+        {
+            width:100% ;
+height:100px ;
+font-size:25px ;
+background-color:red ;
+        }
+        .udbhav
+        {
+font-size:50px ;
+color: aliceblue;
+        }
+        table:hover
+        {
+             box-shadow:30px 60px 60px rgb(180, 250, 100) ;
+/* transform:scaleX(3);*/
+            /* transform:scaleY(30deg);*/
+            transform: rotateX(360deg); 
+            transition:10s ;
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <center><table border="1">
+        <tr>
+            <td><img style="width:100px ;"  src="images/quiz.png" ><h1 class="udbhav"><center>Quiz</center></h1></td>
+        </tr>
+        <tr>
+            <td>
+                <center> <h2 class="udbhav"> 1+2=5</h2></center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <center><h2><input class="greenbg"type="button" value="True"></h2></center> 
+            </td>
+        </tr>
+        <tr>
+            <td>
+               <center><h2> <input class="redbg" type="button" value="false"></h2></center>
+            </td>
+        </tr>
+    </center></table>
+</body>
+</html>

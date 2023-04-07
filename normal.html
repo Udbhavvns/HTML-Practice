@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function add() {
+            //alert("Hello");
+            a = document.getElementById("a").value;
+            b = document.getElementById("b").value;
+            a=Number(a);
+            b=Number(b);
+            document.getElementById("c").value = a * b;
+        }
+
+    </script>
+</head>
+
+<body>
+    <input id="a" type="text">
+and
+    <input id="b" type="text">
+
+    <input id="c" type="text">
+
+    <input onclick="add()" type="button" value="multiply">
+</body>
+
+</html>
