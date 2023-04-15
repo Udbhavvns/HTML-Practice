@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function rectangle() {
+            //alert("hello");
+            x = document.getElementById("x").value;
+            y = document.getElementById("y").value;
+            x = Number(x);
+            y = Number(y);
+            document.getElementById("z").value = x * y;
+            document.getElementById("d").style.width = (x * 10) + "px";
+            document.getElementById("d").style.height = (y * 10) + "px";
+            document.getElementById("d").innerHTML = x * y;
+            document.getElementById("d").style.borderRadius = "0%";
+        }
+        function square() {
+            //alert("hello");
+            x = document.getElementById("x").value;
+            // y = document.getElementById("y").value = 10;
+            x = Number(x);
+            // y = Number(y);
+            y = x;
+            document.getElementById("y").value = y;
+            document.getElementById("z").value = x * y;
+            document.getElementById("d").style.width = (x * 10) + "px";
+            document.getElementById("d").style.height = (y * 10) + "px";
+            document.getElementById("d").innerHTML = x * y;
+            document.getElementById("d").style.borderRadius = "0%";
+        }
+        function circle() {
+            //alert("hello");
+            x = document.getElementById("x").value;
+             y = document.getElementById("y").value = 10;
+            x = Number(x);
+             y = Number(y);
+            y = x;
+            document.getElementById("y").value = y;
+            document.getElementById("z").value = Math.PI * x * x;
+            document.getElementById("d").style.width = (x * 10) + "px";
+            document.getElementById("d").style.height = (x * 10) + "px";
+            document.getElementById("d").style.borderRadius = "50%";
+            document.getElementById("d").innerHTML = x * y;
+        }
+        function cylinder() {
+            //alert("hello");
+            x = document.getElementById("x").value;
+             y = document.getElementById("y").value = 10;
+            x = Number(x);
+             y = Number(y);
+            // y = x;
+            document.getElementById("y").value = y;
+            document.getElementById("z").value = Math.PI * x * x * y;
+            document.getElementById("d").style.width = (x * 10) + "px";
+            document.getElementById("d").style.height = (x * 10) + "px";
+            document.getElementById("d").style.borderRadius = "50%";
+            document.getElementById("d").innerHTML = document.getElementById("z").value;
+        }
+    </script>
+    <style>
+        div {
+            padding: 30px;
+            color: white;
+            box-shadow: 0px 0px 10px gray;
+        }
+
+        .rectangle {
+            background-color: blue;
+            border-color: red;
+            border-style: ridge;
+        }
+
+        .two {
+            height: 25px;
+            font-size: 20px;
+            color: yellowgreen;
+            border-color: blue;
+            border-style: ridge;
+            height: 25px;
+        }
+
+        .two:hover {
+            /* height:50px ; */
+            border-radius: 25px;
+        }
+    </style>
+</head>
+
+<body>
+   <center> <h1>Calculator</h1></center>
+    <center>Breadth <input class="two" id="x" type="number" placeholder="breadth">
+        <br>
+        Length<input class="two" id="y" type="number" placeholder="length">
+        <br>
+        Result<input class="two" id="z" type="text">
+        <br>
+        <input class="two" onclick="rectangle()" type="button" value="rectangle">
+        <br>
+        <input class="two" onclick="square()" type="button" value="square">
+        <br>
+        <input class="two" onclick="circle()" type="button" value="circle">
+        <br>
+        <input class="two" onclick="cylinder()" type="button" value="cylinder"
+    </center>
+    <div style="width: 0px;height: 0px;" id="d" class="rectangle"></div>
+</body>
+
+</html>

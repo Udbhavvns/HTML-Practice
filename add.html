@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+         function subtract() {
+            //alert("Hello");
+            x = document.getElementById("x").value;
+            y = document.getElementById("y").value;
+            x=Number(x);
+            y=Number(y);
+            document.getElementById("z").value = x - y;
+        }
+        function add() {
+//alert("Hello");
+x = document.getElementById("x").value;
+            y = document.getElementById("y").value;
+            x=Number(x);
+            y=Number(y);
+            document.getElementById("z").value = x + y;
+        }
+        function multiply() {
+           //alert("Hello");
+x = document.getElementById("x").value;
+            y = document.getElementById("y").value;
+            x=Number(x);
+            y=Number(y);
+            document.getElementById("z").value = x * y; 
+        }
+        function divide() {
+          //alert("Hello");
+x = document.getElementById("x").value;
+            y = document.getElementById("y").value;
+            x=Number(x);
+            y=Number(y);
+            document.getElementById("z").value = x / y;    
+        }
+    </script>
+</head>
+<body>
+    <center><input id="x" type="number">
+    <br>
+    <input id="y" type="number">
+<br>
+<input id="z" type="number">
+<br>
+<input onclick="subtract()" type="button" value="subtract">
+<input onclick="add()" type="button" value="ADD">
+<input onclick="multiply()" type="button" value="multiply">
+<input onclick="divide()" type="button" value="divide">
+</center>
+
+</body>
+</html>
