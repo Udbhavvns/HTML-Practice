@@ -72,12 +72,116 @@
         let circlecoin = "images/circle.png";
         let chance = 0;
 
-function gameStatus()
-{
-    let result=circleWins();
-    if(result)
-    alert("Coin Wins");
-}
+        function gameStatus() {
+            let result = circleWins();
+            if (result)
+                alert("Coin Wins");
+            result = crossWins();
+            if (result)
+                alert("Cross Wins");
+        }
+
+
+
+
+
+
+        function crossWins() {
+            //*************************************************************
+            let count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t1[i];
+                if (document.getElementById(id).alt == crosscoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+
+
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t2[i];
+                if (document.getElementById(id).alt == crosscoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t3[i];
+                if (document.getElementById(id).alt == crosscoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t4[i];
+                if (document.getElementById(id).alt == crosscoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t5[i];
+                if (document.getElementById(id).alt == crosscoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t6[i];
+                if (document.getElementById(id).alt == crosscoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t7[i];
+                if (document.getElementById(id).alt == crosscoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t8[i];
+                if (document.getElementById(id).alt == crosscoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            return false;
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
 
 
         function circleWins() {
@@ -166,7 +270,10 @@ function gameStatus()
         }
 
 
-
+        function f(x, y) {
+            play(x, y);
+            gameStatus();
+        }
 
         function play(x, y) {
             let currentcoin = document.getElementById("" + x + y);
@@ -182,7 +289,8 @@ function gameStatus()
                 currentcoin.src = crosscoin;
                 currentcoin.alt = crosscoin;
             }
-            gameStatus();
+            currentcoin.focus();
+
             chance = 1 - chance;
         }
 
