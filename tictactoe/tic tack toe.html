@@ -19,8 +19,8 @@
             margin: 10px;
             background-color: black;
             box-shadow: 7px 10px 2px yellowgreen;
-            border-radius:25px ;
-            transition:5s ;
+            border-radius: 25px;
+            transition: 5s;
         }
 
         circle {
@@ -30,7 +30,7 @@
             background-color: black;
             color: antiquewhite;
             box-shadow: 7px 10px 2px yellowgreen;
-            transition:5s ;
+            transition: 5s;
         }
 
         circle:hover {
@@ -46,19 +46,128 @@
         img {
             width: 100%;
             height: 100%;
-            border-radius:25px ;
+            border-radius: 25px;
         }
 
         cross:hover {
             box-shadow: 7px 10px 2px red;
             border-radius: 25px;
         }
+
+        .tic {
+            font-size: 50px;
+        }
     </style>
     <script>
+        const t1 = Array(11, 12, 13);
+        const t2 = [21, 22, 23];
+        const t3 = [31, 32, 33];
+        const t4 = [11, 21, 31];
+        const t5 = [12, 22, 32];
+        const t6 = [13, 23, 33];
+        const t7 = [11, 22, 33];
+        const t8 = [13, 22, 31];
         let emptycoin = "images/white.png";
         let crosscoin = "images/cross.png"
         let circlecoin = "images/circle.png";
         let chance = 0;
+
+function gameStatus()
+{
+    let result=circleWins();
+    if(result)
+    alert("Coin Wins");
+}
+
+
+        function circleWins() {
+            //*************************************************************
+            let count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t1[i];
+                if (document.getElementById(id).alt == circlecoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+
+
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t2[i];
+                if (document.getElementById(id).alt == circlecoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t3[i];
+                if (document.getElementById(id).alt == circlecoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t4[i];
+                if (document.getElementById(id).alt == circlecoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t5[i];
+                if (document.getElementById(id).alt == circlecoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t6[i];
+                if (document.getElementById(id).alt == circlecoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t7[i];
+                if (document.getElementById(id).alt == circlecoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            //************************************************************************
+            count = 0;
+            for (let i = 0; i <= 2; i++) {
+                let id = t8[i];
+                if (document.getElementById(id).alt == circlecoin)
+                    count += 1;
+            }
+            if (count == 3)
+                return true;
+            //************************************************************************
+            return false;
+
+        }
+
+
+
+
         function play(x, y) {
             let currentcoin = document.getElementById("" + x + y);
             console.log(currentcoin);
@@ -71,8 +180,9 @@
             }
             else {
                 currentcoin.src = crosscoin;
-                currentcoin.alt = circlecoin;
+                currentcoin.alt = crosscoin;
             }
+            gameStatus();
             chance = 1 - chance;
         }
 
@@ -80,9 +190,13 @@
 </head>
 
 <body>
+    <!-- <br>
+    <br>
+    <button onclick="circleWins()">Check</button>
+    <br> -->
     <section1>
-        <h1>
-            Udbhav
+        <h1 class="tic">
+            Tic Tac Toe
         </h1>
     </section1>
     <section1>
@@ -119,5 +233,8 @@
             <img alt="images/white.png" onclick="play(3,3)" id="33" src="images/white.png">
         </cross>
     </section1>
+
+
 </body>
+
 </html>
